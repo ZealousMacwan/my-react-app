@@ -4,7 +4,12 @@ class Welcome extends Component {
     
     //must have render which returns html or atleast NULL
     render(){
-        return <h1> Welcome from Class componenet</h1>
+        return(
+            <div>
+                <h1> Welcome {this.props.name} from Class componenet</h1>
+                {this.props.children}            
+            </div>
+        )
     }
 }
 export default Welcome
