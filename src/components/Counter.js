@@ -3,7 +3,7 @@ import React, { Component } from "react"
 class Counter extends Component{
     constructor(props) {
       super(props)
-    
+        console.log(props);
       this.state = {
          count: 0
       }
@@ -12,8 +12,8 @@ class Counter extends Component{
         //setState have two parameter 
         //1 state object
         //2 callBack function executes after state is executed 
-        this.setState( (prevState) => ({
-            count: prevState.count + 1
+        this.setState( (prevState, props) => ({
+            count: prevState.count + props.addvalue
         }))
         console.log(this.state.count);
     }
@@ -28,7 +28,7 @@ class Counter extends Component{
         return(
             <div>
                 <div>Count {this.state.count}</div>
-                <button onClick={()=> this.incrementFive()}>Increment</button>
+                <button onClick={()=> this.incrementFive()} addvalue="5">Increment</button>
             </div>
         )
     }
