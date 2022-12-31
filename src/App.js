@@ -10,7 +10,8 @@ class App extends Component {
   render(){
     return(
       <div className="App">
-        <Counter></Counter>
+        <Greet name="Zealous" heroName="Zee"></Greet>
+        <Welcome name="Zee" heroName="Z"></Welcome>
       </div>
     )
   }
