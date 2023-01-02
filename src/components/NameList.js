@@ -2,6 +2,7 @@ import React from 'react'
 import Person from './Person'
 
 function NameList() {
+    const names = ['Bruce', 'Clerk', 'Diana', 'Bruce']
     const persons = [
         {
             id: 1,
@@ -22,14 +23,16 @@ function NameList() {
             skill: 'C'
         }
     ]
-    const personsList =  persons.map(person => (
-        <Person key={person.id} person={person}></Person>
+    const nameList =  names.map((name, index) => (
+        // Index as key can create problem in sorting or inserting at start
+        // avoid using index and better to use unique id
+        <h2 key={index}>{index} {name}</h2>
     ))
 
   return (
 
     <div>
-        {personsList}
+        {nameList}
     </div>
     // <div>
     //     <h2>{names[0]}</h2>
