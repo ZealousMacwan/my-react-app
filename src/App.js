@@ -16,13 +16,16 @@ import './appStyles.css';
 import styles from './appStyles.module.css';
 import Form from './components/Form';
 import LifeCycleA from './components/LifeCycleA';
+import FragmentDemo from './components/FragmentDemo';
+import Table from './components/Table';
 
 
 class App extends Component {
   render(){
     return(
       <div className="App">
-        <LifeCycleA />
+        {/* Fragment Demo */}
+        <Table></Table>
       </div>
     )
   }
